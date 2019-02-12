@@ -9,6 +9,9 @@ axios.interceptors.request.use(request => {
 	console.log(request);
 	//Edit request
 	return request;
+},error => {
+		console.log(error);
+		return Promise.reject(error);
 })
 ReactDOM.render( <App />, document.getElementById( 'root' ) );
 registerServiceWorker();
