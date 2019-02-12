@@ -12,7 +12,7 @@ class Blog extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://jsonplaceholder.typicode.com/posts')
+        axios.get('http://jsonplaceholder.typicode.com/postsss')
             .then(response => {
                 const posts = response.data.slice(0, 4);
                 const updatedPosts = posts.map(post => {
@@ -21,9 +21,12 @@ class Blog extends Component {
                         author: "Max"
                     }
                 });
-                this.setState({posts: updatedPosts});
+                this.setState({ posts: updatedPosts });
                 // console.log(response);
             })
+            .catch(error => {
+                console.log(error);
+            });
     }
 
     postSelectedHandler = (id) => {
