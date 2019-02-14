@@ -15,6 +15,8 @@ class FullPost extends Component {
         })
     }
 
+
+    //Post request
     componentDidUpdate() {
         if (this.props.id) {
             if (!this.state.loadedPost || (this.state.loadedPost && this.state.loadedPost.id!==this.props.id)) {
