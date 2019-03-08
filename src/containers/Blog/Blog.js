@@ -47,7 +47,7 @@ class Blog extends Component {
         }
 
         return (
-            <div>
+            <div className="Blog">
                 <header>
                     <nav>
                         <ul>
